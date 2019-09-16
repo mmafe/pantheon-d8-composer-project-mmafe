@@ -1,0 +1,22 @@
+uuid: 6c8de435-390c-411d-a19a-4b8e9bce5372
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - test_subtheme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: test_subtheme_help
+theme: test_subtheme
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
