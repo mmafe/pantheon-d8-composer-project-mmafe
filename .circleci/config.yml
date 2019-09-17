@@ -168,9 +168,14 @@ jobs:
           name: prepare for Behat testing
           command: ./.ci/test/behat/initialize
 
+      - run: mkdir var/behat_screenshots/
+      - run: touch var/behat_screenshots/empty.txt
+
       - run:
           name: run acceptance tests with Behat
           command: ./.ci/test/behat/run
+          environment:
+            BEHAT_SCREENSHOTS: '1'
 
       - run:
           # Uncomment line 13 in .ci/test/behat/cleanup to restore a backup
@@ -186,8 +191,9 @@ jobs:
             - $HOME/.composer/cache
 
       - store_artifacts:
-          path: /tmp/artifacts
-          destination: artifacts
+          path: var/behat_screenshots/
+          # path: /tmp/artifacts
+          # destination: artifacts
 
   visual_regression_test:
     <<: *defaults
