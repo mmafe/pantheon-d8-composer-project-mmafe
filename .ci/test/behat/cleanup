@@ -39,3 +39,15 @@ fi
 if [ -d behat-screenshots ]; then
     cp -r behat-screenshots $ARTIFACTS_FULL_DIR/
 fi
+
+echo "------ LIST ------"
+ls
+
+echo "-------Copy behat-screenshots-------"
+cp -r behat-screenshots $ARTIFACTS_FULL_DIR/
+
+echo "-------Copy var/behat-screenshots-------"
+cp -r var/behat-screenshots $ARTIFACTS_FULL_DIR/
+
+echo "-------Copy /var/behat-screenshots-------"
+cp -r /var/behat-screenshots $ARTIFACTS_FULL_DIR/
