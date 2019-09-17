@@ -53,5 +53,5 @@ fi
 
 echo "------ LIST ------"
 ls
-cd var
+cd var/behat-screenshots
 ls
