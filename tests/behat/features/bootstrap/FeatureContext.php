@@ -58,16 +58,18 @@ use Behat\MinkExtension\Context\RawMinkContext;
 
       echo "-------------FEATURECONTEXT: GETTING FILENAME AND PATH ! -------";
       $filename = microtime(true).'.png';
-      $path = $this->getContainer()
-          ->getParameter('kernel.root_dir').'/../behat_screenshots';
+      // $path = $this->getContainer()
+      //     ->getParameter('kernel.root_dir').'/../behat_screenshots';
 
-      if (!file_exists($path)) {
-          mkdir($path);
-      }
+      // if (!file_exists($path)) {
+      //     mkdir($path);
+      // }
 
       echo "-------------FEATURECONTEXT: SAVING SCREENSHOTS! -------";
       echo("----- saving screenshot" . $filename . "to" . $path);
 
-      $this->saveScreenshot($filename, $path);
+      // $this->saveScreenshot($filename, $path);
+
+      $this->saveScreenshot($filename, 'var/behat_screenshots');
   }
 }
