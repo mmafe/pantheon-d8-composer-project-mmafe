@@ -33,6 +33,6 @@ terminus -n env:clear-cache $TERMINUS_SITE.$TERMINUS_ENV
 
 echo "----- creating folders -------"
 # Create mkdir
-mkdir behat_screenshots/
-touch behat_screenshots/empty.txt
+mkdir -p var/behat_screenshots/
+touch var/behat_screenshots/empty.txt
 echo "----- end of creating folders -------"

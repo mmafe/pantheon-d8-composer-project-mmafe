@@ -58,6 +58,8 @@ use Behat\MinkExtension\Context\RawMinkContext;
           mkdir($path);
       }
 
+      echo("----- saving screenshot" . $filename . "to" . $path);
+
       $this->saveScreenshot($filename, $path);
   }
 }

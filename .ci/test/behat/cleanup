@@ -21,6 +21,9 @@ terminus -n env:clear-cache $TERMINUS_SITE.$TERMINUS_ENV
 # Store artifacts
 export ARTIFACTS_DIR_URL="${CI_BUILD_URL}/artifacts/${CI_NODE_INDEX}/artifacts"
 
+echo "ARTIFACTS_DIR_URL $ARTIFACTS_DIR_URL"
+echo "ARTIFACTS_FULL_DIR $ARTIFACTS_FULL_DIR"
+
 # Create the artifacts directory if needed
 if [ ! -d "$ARTIFACTS_FULL_DIR" ]; then
   mkdir -p $ARTIFACTS_FULL_DIR
