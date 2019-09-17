@@ -36,18 +36,22 @@ if [ -d "$ARTIFACTS_FULL_DIR/behat-screenshots" ]; then
   rm -rf $ARTIFACTS_FULL_DIR/behat-screenshots
 fi
 
+echo "-------Copy behat-screenshots-------"
 if [ -d behat-screenshots ]; then
     cp -r behat-screenshots $ARTIFACTS_FULL_DIR/
 fi
 
-echo "------ LIST ------"
-ls
-
-echo "-------Copy behat-screenshots-------"
-cp -r behat-screenshots $ARTIFACTS_FULL_DIR/
-
 echo "-------Copy var/behat-screenshots-------"
-cp -r var/behat-screenshots $ARTIFACTS_FULL_DIR/
+if [ -d var/behat-screenshots ]; then
+  cp -r var/behat-screenshots $ARTIFACTS_FULL_DIR/
+fi
 
 echo "-------Copy /var/behat-screenshots-------"
+if [ -d var/behat-screenshots ]; then
 cp -r /var/behat-screenshots $ARTIFACTS_FULL_DIR/
+fi
+
+echo "------ LIST ------"
+ls
+cd var
+ls
