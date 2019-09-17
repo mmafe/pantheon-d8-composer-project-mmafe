@@ -46,10 +46,10 @@ use Behat\MinkExtension\Context\RawMinkContext;
     echo "-------------FEATURECONTEXT: saveDebugScreenshot! -------";
       $driver = $this->getSession()->getDriver();
 
-      if (!$driver instanceof Selenium2Driver) {
-        echo "-------------FEATURECONTEXT: driver instanceof Selenium2Driver! -------";
-          return;
-      }
+      // if (!$driver instanceof Selenium2Driver) {
+      //   echo "-------------FEATURECONTEXT: driver instanceof Selenium2Driver! -------";
+      //     return;
+      // }
 
       if (!getenv('BEHAT_SCREENSHOTS')) {
         echo "-------------FEATURECONTEXT: NOT BEHAT_SCREENSHOTS! -------";
@@ -65,7 +65,7 @@ use Behat\MinkExtension\Context\RawMinkContext;
           mkdir($path);
       }
 
-      echo "-------------FEATURECONTEXT: SAVING SCXREENSHOTS! -------";
+      echo "-------------FEATURECONTEXT: SAVING SCREENSHOTS! -------";
       echo("----- saving screenshot" . $filename . "to" . $path);
 
       $this->saveScreenshot($filename, $path);
