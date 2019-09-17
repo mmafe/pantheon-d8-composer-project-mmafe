@@ -181,6 +181,8 @@ jobs:
           name: clean up after Behat
           command: ./.ci/test/behat/cleanup
           when: always
+          environment:
+            BEHAT_SCREENSHOTS: '1'
 
       - save_cache:
           key: composer-cache-{{ checksum "composer.lock" }}
@@ -190,7 +192,7 @@ jobs:
       - store_artifacts:
           path: var/behat_screenshots/
           # path: /tmp/artifacts
-          # destination: artifacts
+          destination: artifacts
 
   visual_regression_test:
     <<: *defaults
