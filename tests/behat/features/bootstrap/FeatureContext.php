@@ -7,13 +7,14 @@ use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Behat\Behat\Hook\Scope\AfterStepScope;
 use Behat\Mink\Driver\Selenium2Driver;
-use Behat\MinkExtension\Context\RawMinkContext
+use Behat\MinkExtension\Context\RawMinkContext;
 
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext {
-
+// class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext {
+  
+  class FeatureContext extends RawMinkContext {
   /**
    * Initializes context.
    *

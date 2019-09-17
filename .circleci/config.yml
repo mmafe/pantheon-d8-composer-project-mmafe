@@ -168,9 +168,6 @@ jobs:
           name: prepare for Behat testing
           command: ./.ci/test/behat/initialize
 
-      - run: mkdir var/behat_screenshots/
-      - run: touch var/behat_screenshots/empty.txt
-
       - run:
           name: run acceptance tests with Behat
           command: ./.ci/test/behat/run
