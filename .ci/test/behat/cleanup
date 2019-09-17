@@ -52,4 +52,5 @@ cp -r /var/behat-screenshots $ARTIFACTS_FULL_DIR/
 fi
 
 echo "------ LIST ------"
+cd var
 ls -R
